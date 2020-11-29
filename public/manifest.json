@@ -10,5 +10,11 @@
     "default_icon": "img/icon.png",
     "default_title": "Bookmark Total",
     "default_popup": "popup/index.html"
-  }
+  },
+  "background": {
+    "scripts": ["background/background.bundle.js"]
+  },
+  "permissions": [
+    "bookmarks"
+  ]
 }

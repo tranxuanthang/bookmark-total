@@ -1,13 +1,14 @@
 const path = require('path')
 const CopyPlugin = require('copy-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
+  devtool: false,
   entry: {
-    popup: './src/popup.js'
+    popup: './src/popup.js',
     // main: './src/main.js',
-    // background: './src/background.js',
+    background: './src/background.js',
     // content: './src/content.js'
   },
   output: {
@@ -23,7 +24,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'vue-style-loader',
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -43,5 +44,8 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new VueLoaderPlugin()
-  ]
+  ],
+  performance: {
+    hints: process.env.NODE_ENV === 'production'
+  }
 }
