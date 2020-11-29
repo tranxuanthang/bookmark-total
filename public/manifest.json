@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Bookmark Total",
+  "version": "1.0",
+  "description": "Sync bookmarks across your browsers.",
+  "icons": {
+    "48": "img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_title": "Bookmark Total",
+    "default_popup": "popup/index.html"
+  }
+}
