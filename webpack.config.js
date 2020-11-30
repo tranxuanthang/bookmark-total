@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
-  devtool: false,
+  devtool: 'cheap-module-source-map',
   entry: {
     popup: './src/popup.js',
     // main: './src/main.js',
